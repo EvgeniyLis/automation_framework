@@ -12,6 +12,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+// in this class are created methotds which are read data from excel file
 public class ExcelApiTest{
     public FileInputStream fis = null;
     public XSSFWorkbook workbook = null;

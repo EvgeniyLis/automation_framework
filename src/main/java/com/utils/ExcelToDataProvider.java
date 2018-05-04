@@ -1,5 +1,6 @@
 package com.utils;
 
+// in this class is creates method which returns Object[][]. This method is used in test class with @Data Provider to send test data to test
 public class ExcelToDataProvider {
 
     ExcelApiTest eat = null;
