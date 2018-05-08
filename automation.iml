@@ -87,6 +87,6 @@
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-compiler-api:2.8.2" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-compiler-manager:2.8.2" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.codehaus.plexus:plexus-compiler-javac:2.8.2" level="project" />
-    <orderEntry type="library" name="poi-3.17" level="project" />
+    <orderEntry type="library" name="commons-codec-1.10" level="project" />
   </component>
 </module>
