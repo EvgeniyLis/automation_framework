@@ -52,11 +52,11 @@ public class VitalNotFoundTest extends BaseVitalSourseTest {
         return data;
     }
 
-    /*@AfterClass
+    @AfterClass
     public void taerDown(){
         if (driver!=null){
             driver.quit();
         }
-    }*/
+    }
 
 }
