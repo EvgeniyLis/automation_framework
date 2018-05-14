@@ -62,7 +62,6 @@ public class VitalNotFoundTest extends BaseVitalSourseTest {
         else{
             Assert.assertFalse(driver.findElement(By.className("product-overview__title-block")).getText().contains(isbn));
         }
-
     }
 
     @DataProvider
