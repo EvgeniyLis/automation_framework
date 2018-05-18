@@ -8,7 +8,6 @@
 
     <test name="Vitalsource test cases">
         <classes>
-            <class name="VitalNotFoundTest"></class>
             <class name="VitalNoDataTest"></class>
             <class name="VitalSoursePriceMatchTest"></class>
         </classes>

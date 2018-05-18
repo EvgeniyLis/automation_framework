@@ -16,9 +16,9 @@ public class TestUtils {
     public static WebDriver initchromeDriverWithProxy(){
         System.setProperty("webdriver.chrome.driver", ConfigProperties.getTestProperty("chromedriver"));
         Proxy proxy = new Proxy();
-        proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy2"));
-        proxy.setFtpProxy(ConfigProperties.getTestProperty("proxy2"));
-        proxy.setSslProxy(ConfigProperties.getTestProperty("proxy2"));
+        proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy1"));
+        proxy.setFtpProxy(ConfigProperties.getTestProperty("proxy1"));
+        proxy.setSslProxy(ConfigProperties.getTestProperty("proxy1"));
         DesiredCapabilities cp = new DesiredCapabilities();
         cp.setCapability(CapabilityType.PROXY, proxy);
         WebDriver webDriver = new ChromeDriver(cp);
@@ -81,5 +81,28 @@ public class TestUtils {
     }
     //-------------------------------------------------------------------------------------------------------------
 
-}
+    static String queryIsbn = "SELECT ISBN13 FROM user_test.mheducation_test;";
 
+    public static ArrayList<Object[]> testDataForJunitNotFoundFromMySql(){
+
+        ArrayList<Object[]> myData = new ArrayList<Object[]>();
+
+        ResultSet rs = null;
+        try {
+            PreparedStatement statement = MysqlConnectStatic.connect().prepareStatement(queryIsbn);
+            rs = statement.executeQuery(queryIsbn);
+            while (rs.next()) { // executing of query
+                String isbn = rs.getString("ISBN13");
+                Object ob[] = {isbn};
+                myData.add(ob);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            MysqlConnectStatic.disconnect();
+        }
+
+        return myData;
+    }
+
+}

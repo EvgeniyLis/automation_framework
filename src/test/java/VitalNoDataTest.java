@@ -6,7 +6,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import com.utils.ConfigProperties;
+
+import java.io.IOException;
 
 import static com.utils.TestUtils.initchromeDriverWithProxy;
 
@@ -27,11 +28,12 @@ public class VitalNoDataTest extends BaseVitalSourseTest {
     // в данном тестовом методе проверяется отсутствие цены для определённого rental term. В качестве параметра из Excel файла передаётся урля, и рентал тёрм
     // драйвер идёт по урле и проверяет, что на странице в блоке цен отсутствует рента, переданная в качестве параметра из Excel файла
     @Test(dataProvider = "get_Test_Data_for_NoData_Test")
-    public void noDataTestVitalSourse(String rental_term, String url){
+    public void noDataTestVitalSourse(String rental_term, String url) throws IOException {
         driver.get(url);
         //driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         Assert.assertFalse(driver.findElement(By.id("price-section")).getText().contains(rental_term));
     }
+
 
     @DataProvider
     public Object[][] get_Test_Data_for_NoData_Test() throws Exception{

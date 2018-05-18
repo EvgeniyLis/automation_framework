@@ -1,14 +1,17 @@
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.*;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.utils.GetScreenshot.capture;
 import static com.utils.TestUtils.initchromeDriverWithProxy;
 
 public class VitalNotFoundTest extends BaseVitalSourseTest {
@@ -16,6 +19,8 @@ public class VitalNotFoundTest extends BaseVitalSourseTest {
     //TestUtils testUtils = new TestUtils(); // создание экземпляра класса TestUtils для вызова метода testDataForNotFoundFromMySql() - считывания данных из MySql
 
     WebDriver driver;
+    ExtentReports extent;
+    ExtentTest test;
     String info;
     List<String> bookInfo = new ArrayList<>(); // list with books info
 
@@ -26,8 +31,14 @@ public class VitalNotFoundTest extends BaseVitalSourseTest {
         driver.manage().deleteAllCookies();
     }
 
+    @BeforeTest
+    public void init(){
+        extent = new ExtentReports(System.getProperty("user.dir")+"/test-output/Extent.html");
+    }
+
     @Test(dataProvider = "getTestDataforNotFound")
     public void notFoundTestVitalSourse(String isbn) throws Exception {
+        test = extent.startTest("captureScreenshot");
         driver.get("https://www.vitalsource.com/textbooks");
         driver.findElement(By.id("term")).sendKeys(isbn, Keys.ENTER);
 
@@ -68,6 +79,16 @@ public class VitalNotFoundTest extends BaseVitalSourseTest {
     public Object[][] getTestDataforNotFound() throws Exception{
         Object[][] data = excelToDataProvider.testData("src/testdata/IsbnForNotFound.xlsx", "TestData");
         return data;
+    }
+
+    @AfterMethod
+    public void getResult(ITestResult result) throws IOException {
+        if (result.getStatus() == ITestResult.FAILURE){
+            String screenshotPath = capture(driver, "screenshotForExtentReport");
+            test.log(LogStatus.FAIL, result.getThrowable());
+            test.log(LogStatus.FAIL, "Screenshot Below: "+ test.addScreenCapture(screenshotPath));
+        }
+        extent.endTest(test);
     }
 
     @AfterClass

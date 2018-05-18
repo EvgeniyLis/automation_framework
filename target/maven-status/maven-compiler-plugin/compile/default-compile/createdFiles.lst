@@ -1,6 +1,7 @@
 com\utils\ConfigProperties.class
 com\utils\ExcelToDataProvider.class
 com\utils\MysqlConnect.class
+com\extent_report_listener\ExtentReporterNG.class
 com\utils\SpreadsheetData.class
 com\utils\ExcelApiTest.class
 com\utils\TestUtils.class
