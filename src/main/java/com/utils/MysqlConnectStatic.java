@@ -26,13 +26,13 @@ public class MysqlConnectStatic {
     public static Connection connect() {
         if (connection == null){
             try {
-                Class.forName(ConfigProperties.getTestProperty("databaseDriver"));
+                //Class.forName(ConfigProperties.getTestProperty("databaseDriver"));
                 connection = DriverManager.getConnection(ConfigProperties.getTestProperty("mysqlLocalUrl"), getProperties());
             } catch (SQLException e){
                 e.printStackTrace();
-            } catch (ClassNotFoundException e) {
+            } /*catch (ClassNotFoundException e) {
                 e.printStackTrace();
-            }
+            }*/
         }
         return connection;
     }

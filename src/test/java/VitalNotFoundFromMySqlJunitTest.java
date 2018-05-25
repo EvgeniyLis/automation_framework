@@ -1,19 +1,19 @@
 import com.utils.TestUtils;
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.apache.commons.io.FileUtils;
+import org.junit.*;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 import static com.utils.TestUtils.initchromeDriverWithProxy;
 
@@ -25,6 +25,19 @@ public class VitalNotFoundFromMySqlJunitTest {
     private  String isbn;
     String info;
     List<String> bookInfo = new ArrayList<>(); // list with books info
+
+    @Rule
+    public TestWatcher watcher = new TestWatcher() {
+
+        @Override
+        protected void failed(Throwable e, Description description) {
+            try {
+                takeScreenShot();
+            }catch (IOException e1){
+                e1.printStackTrace();
+            }
+        }
+    };
 
     @Parameters
     public static Collection testData() throws IOException {
@@ -86,6 +99,13 @@ public class VitalNotFoundFromMySqlJunitTest {
         if (driver!=null){
             driver.quit();
         }
+    }
+
+    public void takeScreenShot() throws IOException {
+        File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String fileName = (isbn+ UUID.randomUUID()).toString();
+        File targetFile = new File("ErrorScreenshot//" + fileName + ".png");
+        FileUtils.copyFile(scrFile, targetFile);
     }
 
 }

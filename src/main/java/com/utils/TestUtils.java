@@ -81,7 +81,7 @@ public class TestUtils {
     }
     //-------------------------------------------------------------------------------------------------------------
 
-    static String queryIsbn = "SELECT ISBN13 FROM user_test.mheducation_test;";
+    static String queryIsbn = "SELECT offer from user_test.cases;";
 
     public static ArrayList<Object[]> testDataForJunitNotFoundFromMySql(){
 
@@ -92,7 +92,7 @@ public class TestUtils {
             PreparedStatement statement = MysqlConnectStatic.connect().prepareStatement(queryIsbn);
             rs = statement.executeQuery(queryIsbn);
             while (rs.next()) { // executing of query
-                String isbn = rs.getString("ISBN13");
+                String isbn = rs.getString("offer");
                 Object ob[] = {isbn};
                 myData.add(ob);
             }
