@@ -1,8 +1,10 @@
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -26,6 +28,7 @@ public class VitalNotFoundTest extends BaseVitalSourseTest {
 
     @BeforeClass
     public void setUp(){
+        //RecordDataForVitalsourceNoData.getTestData();
         driver = initchromeDriverWithProxy();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -78,6 +81,7 @@ public class VitalNotFoundTest extends BaseVitalSourseTest {
     @DataProvider
     public Object[][] getTestDataforNotFound() throws Exception{
         Object[][] data = excelToDataProvider.testData("src/testdata/IsbnForNotFound.xlsx", "TestData");
+        //testUtils.testDataForJunitNotFoundFromMySql().iterator();
         return data;
     }
 

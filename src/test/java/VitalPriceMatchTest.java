@@ -1,4 +1,3 @@
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +12,7 @@ import java.util.List;
 
 import static com.utils.TestUtils.initchromeDriverWithProxy;
 
-public class VitalSoursePriceMatchTest extends BaseVitalSourseTest {
+public class VitalPriceMatchTest extends BaseVitalSourseTest {
 
     WebDriver driver;
 
@@ -40,7 +39,7 @@ public class VitalSoursePriceMatchTest extends BaseVitalSourseTest {
 
     @DataProvider
     public Object[][] getTestDataforPriceMatch() throws Exception{
-        Object[][] data = excelToDataProvider.testData("src/testdata/PriceMatchIsbns.xlsx", "TestData");
+        Object[][] data = excelToDataProvider.testData("src/testdata/PriceMatchVitalsource.xlsx", "TestData");
         return data;
     }
 

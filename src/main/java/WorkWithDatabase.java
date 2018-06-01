@@ -15,13 +15,13 @@ public class WorkWithDatabase {
 
     public static void main(String[] args) {
 
-        String queryIsbnsNorAvailable = "SELECT distinct(ISBN13) from user_test.duty_vitalsource_data;";
+        String queryIsbnsNotAvailable = "SELECT distinct(ISBN13) from user_test.duty_vitalsource_data;";
         ArrayList<String> myData = new ArrayList<>(); // list with the distinct of isbns from duty_vitalsource_data table
         try {
             con = DriverManager.getConnection(url, user, password);
             stmt = con.createStatement();
             //PreparedStatement statement = MysqlConnectStatic.connect().prepareStatement(queryIsbnsNorAvailable);
-            rs = stmt.executeQuery(queryIsbnsNorAvailable);
+            rs = stmt.executeQuery(queryIsbnsNotAvailable);
             while (rs.next()){
                 String isbn=rs.getString("ISBN13");
                 myData.add(isbn);
@@ -32,15 +32,28 @@ public class WorkWithDatabase {
             MysqlConnectStatic.disconnect();
         }
 
-        for (int i=0; i<myData.size(); i++){
-            try {
-                con = DriverManager.getConnection(url, user, password);
-                stmt = con.createStatement();
-                stmt.executeUpdate("INSERT INTO user_test.cases (offer, url, price) VALUES ("+ myData.get(i) +", null, null);"); // record isbns from the list to testcases table
+        System.out.println("list is created");
 
-            } catch (SQLException sqlEx) {
-                sqlEx.printStackTrace();
+
+        try {
+            con = DriverManager.getConnection(url, user, password);
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
+
+        try {
+            stmt = con.createStatement();
+            for (int i=0; i<myData.size(); i++) {
+                stmt.addBatch("INSERT INTO user_test.cases (offer, url, price) VALUES ('"+ myData.get(i) +"', null, null);");
             }
+        } catch (SQLException sqlEx) {
+            sqlEx.printStackTrace();
+        }
+
+        try {
+            stmt.executeBatch();
+        } catch (SQLException e){
+            e.printStackTrace();
         }
     }
 }
