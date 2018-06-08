@@ -3,19 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="35ca74e4-e19d-4edc-baba-59fc2e53eba5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ErrorScreenshot/screenshotForExtentReport.png" afterPath="$PROJECT_DIR$/ErrorScreenshot/screenshotForExtentReport.png" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WorkWithDatabase.java" afterPath="$PROJECT_DIR$/src/main/java/WorkWithDatabase.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CapturingScreenshotTest.java" afterPath="$PROJECT_DIR$/src/test/java/CapturingScreenshotTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/VitalNotFoundTest.java" afterPath="$PROJECT_DIR$/src/test/java/VitalNotFoundTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/VitalSoursePriceMatchTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/testng.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AmazonAsinPairsTest.java" afterPath="$PROJECT_DIR$/src/test/java/AmazonAsinPairsTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/AmazonIsbnAsinTest.java" afterPath="$PROJECT_DIR$/src/test/java/AmazonIsbnAsinTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseVitalSourseTest.java" afterPath="$PROJECT_DIR$/src/test/java/vitalsource/BaseVitalSourseTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VitalNoDataTest.java" afterPath="$PROJECT_DIR$/src/test/java/vitalsource/VitalNoDataTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VitalNotFoundFromMySqlJunitTest.java" afterPath="$PROJECT_DIR$/src/test/java/vitalsource/VitalNotFoundFromMySqlJunitTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VitalNotFoundJunitTest.java" afterPath="$PROJECT_DIR$/src/test/java/vitalsource/VitalNotFoundJunitTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VitalNotFoundTest.java" afterPath="$PROJECT_DIR$/src/test/java/vitalsource/VitalNotFoundTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/VitalPriceMatchTest.java" afterPath="$PROJECT_DIR$/src/test/java/vitalsource/VitalPriceMatchTest.java" />
       <change beforePath="$PROJECT_DIR$/src/testdata/IsbnForNotFound.xlsx" afterPath="$PROJECT_DIR$/src/testdata/IsbnForNotFound.xlsx" />
       <change beforePath="$PROJECT_DIR$/src/testdata/NoDataIsbns.xlsx" afterPath="$PROJECT_DIR$/src/testdata/NoDataIsbns.xlsx" />
-      <change beforePath="$PROJECT_DIR$/src/testdata/PriceMatchIsbns.xlsx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/testdata/PriceMatchIsbns.xlsx" afterPath="$PROJECT_DIR$/src/testdata/PriceMatchVitalsource.xlsx" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/VitalNotFoundTest.class" afterPath="$PROJECT_DIR$/target/test-classes/VitalNotFoundTest.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/VitalSoursePriceMatchTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/testdata/PriceMatchVitalsource.xlsx" afterPath="$PROJECT_DIR$/src/testdata/PriceMatchIsbns.xlsx" />
+      <change beforePath="$PROJECT_DIR$/src/testdata/PriceMatchWiley.xlsx" afterPath="$PROJECT_DIR$/src/testdata/PriceMatchWiley.xlsx" />
+      <change beforePath="$PROJECT_DIR$/target/classes/testng.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/BaseVitalSourseTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/VitalNoDataTest.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/VitalNotFoundTest.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,64 +35,7 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WileyPriceMatchTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/WileyPriceMatchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VitalPriceMatchTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/VitalPriceMatchTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="50" column="5" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="50" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseVitalSourseTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/BaseVitalSourseTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="72" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/TestUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="83" column="65" lean-forward="false" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="65" />
-              <folding>
-                <element signature="e#3517#3527#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecordDataForVitalsourceNoData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/RecordDataForVitalsourceNoData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="38" column="125" lean-forward="false" selection-start-line="38" selection-start-column="125" selection-end-line="38" selection-end-column="125" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,18 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/cppttrainee/MheducationPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/ConfigProperties.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cppttest/MheducationTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cppttest/CheggNotFoundTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cppttest/VitalNoDataTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cppttest/VitalSoursePriceMatchTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cppttest/BaseTestVitalSourse.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cppttest/AmazonProxyTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cppttest/VitalNotFoundTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/test/VitalNotFoundTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/TestUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Utils/MysqlConnect.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ConfigProperties.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ReaderExcel.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DataReader.java" />
@@ -137,7 +73,6 @@
         <option value="$PROJECT_DIR$/src/main/java/ReadExcelDataUsingUtilClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ExcelToDataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ExcelApiTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/BaseVitalSourseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/utils/ExcelApiTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/VitalSoursePriceMatchTest.java" />
@@ -163,12 +98,25 @@
         <option value="$PROJECT_DIR$/src/test/java/VitalNoDataTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/CapturingScreenshotTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/WorkWithDatabase.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/utils/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/RecordDataForVitalsourceNoData.java" />
         <option value="$PROJECT_DIR$/src/test/java/VitalNotFoundTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/VitalPriceMatchTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/WileyPriceMatchTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Vitalsource/BaseVitalSourseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Vitalsource/VitalNotFoundTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Vitalsource/VitalPriceMatchTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Vitalsource/VitalNoDataTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Vitalsource/VitalNotFoundFromMySqlJunitTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Vitalsource/VitalNotFoundJunitTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/vitalsource/VitalNotFoundJunitTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/BaseVitalSourseTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MhEduPriceMatchTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/PearsonPriceMatchTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
+        <option value="$PROJECT_DIR$/src/test/java/vitalsource/VitalNoDataTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/vitalsource/VitalPriceMatchTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/vitalsource/BaseVitalSourseTest.java" />
       </list>
     </option>
   </component>
@@ -247,6 +195,13 @@
               <item name="automation_2.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="automation_2.0" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vitalsource" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="automation_2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automation_2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -272,6 +227,13 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="automation_2.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="automation_2.0" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="automation_2.0" type="b2602c69:ProjectViewProjectNode" />
@@ -337,7 +299,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.WileyPriceMatchTest.WileyPriceMatchTest">
+  <component name="RunManager" selected="TestNG.VitalPriceMatchTest.priceMatchTestVitalSourse">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -345,9 +307,14 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="RecordDataForVitalsourceNoData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="RecordDataForVitalsourceNoData" />
+    <configuration name="BaseVitalSourseTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="vitalsource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="vitalsource.BaseVitalSourseTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -372,26 +339,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
-    </configuration>
-    <configuration name="VitalNotFoundFromMySqlJunitTest.notFoundTestVitalSourse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="automation" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VitalNotFoundFromMySqlJunitTest" />
-      <option name="METHOD_NAME" value="notFoundTestVitalSourse" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -420,14 +367,51 @@
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
     </configuration>
-    <configuration name="VitalNotFoundTest.notFoundTestVitalSourse" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="VitalNoDataTest.noDataTestVitalSourse" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="vitalsource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="automation" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VitalNotFoundTest" />
+      <option name="PACKAGE_NAME" value="vitalsource" />
+      <option name="MAIN_CLASS_NAME" value="vitalsource.VitalNoDataTest" />
+      <option name="METHOD_NAME" value="noDataTestVitalSourse" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="VitalNotFoundTest.notFoundTestVitalSourse" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="vitalsource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="automation" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="vitalsource" />
+      <option name="MAIN_CLASS_NAME" value="vitalsource.VitalNotFoundTest" />
       <option name="METHOD_NAME" value="notFoundTestVitalSourse" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -447,14 +431,19 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="VitalSoursePriceMatchTest.priceMatchTestVitalSourse" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration name="VitalPriceMatchTest.priceMatchTestVitalSourse" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="vitalsource.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="automation" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VitalSoursePriceMatchTest" />
+      <option name="PACKAGE_NAME" value="vitalsource" />
+      <option name="MAIN_CLASS_NAME" value="vitalsource.VitalPriceMatchTest" />
       <option name="METHOD_NAME" value="priceMatchTestVitalSourse" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -535,19 +524,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.VitalNotFoundTest.notFoundTestVitalSourse" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.VitalSoursePriceMatchTest.priceMatchTestVitalSourse" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.VitalNotFoundFromMySqlJunitTest.notFoundTestVitalSourse" />
-      <item index="3" class="java.lang.String" itemvalue="Application.RecordDataForVitalsourceNoData" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.WileyPriceMatchTest.WileyPriceMatchTest" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.WileyPriceMatchTest.WileyPriceMatchTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.BaseVitalSourseTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.VitalPriceMatchTest.priceMatchTestVitalSourse" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.VitalNotFoundTest.notFoundTestVitalSourse" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.VitalNoDataTest.noDataTestVitalSourse" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.WileyPriceMatchTest.WileyPriceMatchTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.VitalNotFoundTest.notFoundTestVitalSourse" />
-        <item index="2" class="java.lang.String" itemvalue="Application.RecordDataForVitalsourceNoData" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.VitalNotFoundFromMySqlJunitTest.notFoundTestVitalSourse" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.VitalSoursePriceMatchTest.priceMatchTestVitalSourse" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG.VitalPriceMatchTest.priceMatchTestVitalSourse" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.VitalNoDataTest.noDataTestVitalSourse" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.VitalNotFoundTest.notFoundTestVitalSourse" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.WileyPriceMatchTest.WileyPriceMatchTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.BaseVitalSourseTest" />
       </list>
     </recent_temporary>
   </component>
@@ -568,40 +557,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="VitalNotFoundFromMySqlJunitTest_notFoundTestVitalSourse - 2018.05.31 at 18h 20m 20s.xml">
-      <configuration name="VitalNotFoundFromMySqlJunitTest.notFoundTestVitalSourse" configurationId="JUnit" />
+    <history-entry file="VitalNoDataTest_noDataTestVitalSourse - 2018.06.07 at 15h 21m 53s.xml">
+      <configuration name="VitalNoDataTest.noDataTestVitalSourse" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="VitalNotFoundTest_notFoundTestVitalSourse - 2018.05.31 at 18h 48m 19s.xml">
+    <history-entry file="VitalNoDataTest_noDataTestVitalSourse - 2018.06.07 at 15h 25m 47s.xml">
+      <configuration name="VitalNoDataTest.noDataTestVitalSourse" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="VitalNoDataTest_noDataTestVitalSourse - 2018.06.07 at 15h 28m 42s.xml">
+      <configuration name="VitalNoDataTest.noDataTestVitalSourse" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="VitalNoDataTest_noDataTestVitalSourse - 2018.06.07 at 15h 30m 15s.xml">
+      <configuration name="VitalNoDataTest.noDataTestVitalSourse" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="VitalNotFoundTest_notFoundTestVitalSourse - 2018.06.07 at 15h 14m 02s.xml">
       <configuration name="VitalNotFoundTest.notFoundTestVitalSourse" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="VitalNotFoundTest_notFoundTestVitalSourse - 2018.05.31 at 18h 52m 08s.xml">
+    <history-entry file="VitalNotFoundTest_notFoundTestVitalSourse - 2018.06.07 at 15h 19m 31s.xml">
       <configuration name="VitalNotFoundTest.notFoundTestVitalSourse" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="VitalNotFoundTest_notFoundTestVitalSourse - 2018.05.31 at 18h 53m 31s.xml">
-      <configuration name="VitalNotFoundTest.notFoundTestVitalSourse" configurationId="TestNG" />
+    <history-entry file="VitalPriceMatchTest_priceMatchTestVitalSourse - 2018.06.07 at 15h 36m 18s.xml">
+      <configuration name="VitalPriceMatchTest.priceMatchTestVitalSourse" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="VitalSoursePriceMatchTest_priceMatchTestVitalSourse - 2018.05.31 at 12h 32m 00s.xml">
-      <configuration name="VitalSoursePriceMatchTest.priceMatchTestVitalSourse" configurationId="TestNG" />
+    <history-entry file="VitalPriceMatchTest_priceMatchTestVitalSourse - 2018.06.07 at 15h 41m 00s.xml">
+      <configuration name="VitalPriceMatchTest.priceMatchTestVitalSourse" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="VitalSoursePriceMatchTest_priceMatchTestVitalSourse - 2018.05.31 at 12h 33m 19s.xml">
-      <configuration name="VitalSoursePriceMatchTest.priceMatchTestVitalSourse" configurationId="TestNG" />
+    <history-entry file="VitalPriceMatchTest_priceMatchTestVitalSourse - 2018.06.07 at 15h 43m 15s.xml">
+      <configuration name="VitalPriceMatchTest.priceMatchTestVitalSourse" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="WileyPriceMatchTest_WileyPriceMatchTest - 2018.06.01 at 12h 08m 59s.xml">
-      <configuration name="WileyPriceMatchTest.WileyPriceMatchTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="WileyPriceMatchTest_WileyPriceMatchTest - 2018.06.01 at 12h 09m 33s.xml">
-      <configuration name="WileyPriceMatchTest.WileyPriceMatchTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="WileyPriceMatchTest_WileyPriceMatchTest - 2018.06.01 at 12h 16m 06s.xml">
-      <configuration name="WileyPriceMatchTest.WileyPriceMatchTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="WileyPriceMatchTest_WileyPriceMatchTest - 2018.06.01 at 12h 18m 15s.xml">
-      <configuration name="WileyPriceMatchTest.WileyPriceMatchTest" configurationId="TestNG" />
+    <history-entry file="VitalPriceMatchTest_priceMatchTestVitalSourse - 2018.06.07 at 15h 45m 26s.xml">
+      <configuration name="VitalPriceMatchTest.priceMatchTestVitalSourse" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -612,12 +600,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36688313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35797253" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40760297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19936034" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40696117" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19479166" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4069264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -671,17 +659,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/ConfigProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding>
-            <element signature="e#815#816#0" expanded="false" />
-            <element signature="e#865#866#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -732,32 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VitalNotFoundJunitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VitalNotFoundFromMySqlJunitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DataDrivenFromExcelTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -766,23 +717,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VitalNoDataTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/TestUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="83" column="65" lean-forward="false" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="65" />
-          <folding>
-            <element signature="e#3517#3527#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -794,39 +733,114 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VitalNotFoundTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/AmazonIsbnAsinTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="84" column="20" lean-forward="false" selection-start-line="84" selection-start-column="20" selection-end-line="84" selection-end-column="20" />
+        <state relative-caret-position="373">
+          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/BaseVitalSourseTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/vitalsource/VitalNotFoundFromMySqlJunitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/vitalsource/VitalNotFoundJunitTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="8" column="72" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="72" />
+          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MhEduPriceMatchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="40" selection-start-column="4" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/PearsonPriceMatchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="31" column="120" lean-forward="false" selection-start-line="31" selection-start-column="120" selection-end-line="31" selection-end-column="120" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/WileyPriceMatchTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="164">
+          <caret line="23" column="52" lean-forward="true" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/ConfigProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#865#866#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/VitalPriceMatchTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/utils/TestUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/vitalsource/VitalNotFoundTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="33" column="30" lean-forward="true" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/vitalsource/VitalNoDataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="34" column="55" lean-forward="false" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/vitalsource/VitalPriceMatchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/vitalsource/BaseVitalSourseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="37" column="28" lean-forward="false" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>

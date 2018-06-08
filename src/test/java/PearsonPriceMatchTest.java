@@ -2,17 +2,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
+import vitalsource.BaseVitalSourseTest;
 
 import java.util.List;
 
 import static com.utils.TestUtils.initchromeDriverWithProxy;
 
-public class VitalPriceMatchTest extends BaseVitalSourseTest {
+public class PearsonPriceMatchTest extends BaseVitalSourseTest {
 
     WebDriver driver;
 
@@ -24,29 +23,29 @@ public class VitalPriceMatchTest extends BaseVitalSourseTest {
     }
 
     @Test(dataProvider = "getTestDataforPriceMatch")
-    public void priceMatchTestVitalSourse(String rental_term, String retail_price, String url){
+    public void PearsonPriceMatchTest(String isbn, String price_net, String url) {
         driver.get(url);
-        //driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 
-        List<WebElement> priceBlocksElements = driver.findElements(By.cssSelector("div[class*='vs-box__selection']"));
+        List<WebElement> blockWithIsbnPearson = driver.findElements(By.id("genericChoice"));
 
-        if (priceBlocksElements.size() == 1){
-            Assert.assertTrue(driver.findElement(By.cssSelector("div[class*='vs-box__selection']")).getText().contains(retail_price));
+        if (blockWithIsbnPearson.size() == 1) {
+            Assert.assertTrue(driver.findElement(By.id("genericChoice")).getText().contains(convertedPriceNet(price_net)));
         } else {
-            Assert.assertTrue(getFindingBlock(priceBlocksElements, rental_term).getText().contains(retail_price));
+            Assert.assertTrue(getFindingBlock(blockWithIsbnPearson, correctIsbn(isbn)).getText().contains(convertedPriceNet(price_net)));
         }
     }
 
     @DataProvider
     public Object[][] getTestDataforPriceMatch() throws Exception{
-        Object[][] data = excelToDataProvider.testData("src/testdata/PriceMatchVitalsource.xlsx", "TestData");
+        Object[][] data = excelToDataProvider.testData("src/testdata/PriceMatchIsbns.xlsx", "TestData");
         return data;
     }
 
-    @AfterClass
+    /*@AfterClass
     public void taerDown(){
         if (driver!=null){
             driver.quit();
         }
-    }
+    }*/
+
 }

@@ -1,3 +1,4 @@
+package vitalsource;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,10 +9,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import static com.utils.TestUtils.initchromeDriverWithProxy;
 
-public class VitalNoDataTest extends BaseVitalSourseTest {
+public class VitalNoDataTest extends vitalsource.BaseVitalSourseTest {
 
     //static WebDriver driver = new ChromeDriver();
     //TestUtils testUtils = new TestUtils(); // создание экземпляра класса TestUtils для вызова метода testDataForNotFoundFromMySql() - считывания данных из MySql
@@ -30,7 +32,7 @@ public class VitalNoDataTest extends BaseVitalSourseTest {
     @Test(dataProvider = "get_Test_Data_for_NoData_Test")
     public void noDataTestVitalSourse(String rental_term, String url) throws IOException {
         driver.get(url);
-        //driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
         Assert.assertFalse(driver.findElement(By.id("price-section")).getText().contains(rental_term));
     }
 

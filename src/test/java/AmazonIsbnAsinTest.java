@@ -1,4 +1,5 @@
 
+import vitalsource.BaseVitalSourseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +10,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.security.Key;
 import java.util.List;
 
 import static com.utils.TestUtils.initchromeDriverWithProxy;

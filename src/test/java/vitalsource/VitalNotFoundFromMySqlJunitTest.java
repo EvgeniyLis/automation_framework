@@ -1,3 +1,5 @@
+package vitalsource;
+
 import com.utils.TestUtils;
 import org.apache.commons.io.FileUtils;
 import org.junit.*;
