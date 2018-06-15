@@ -19,7 +19,6 @@ public class BaseVitalSourseTest {
         return findingBlock;
     }
 
-
     public String correctIsbn(String isbn){
         StringBuffer sb = new StringBuffer(isbn);
         sb.insert(3,"-");
@@ -47,6 +46,16 @@ public class BaseVitalSourseTest {
                 convertedPriceNet = sb.toString();
                 return convertedPriceNet;
             } else { return price_net; }
+        }
+    }
+
+    public boolean isbnMatch(WebElement element ,String isbn) {
+        boolean isbnMatch = true;
+        if (element.getText().contains(isbn)){
+            return isbnMatch;
+        } else {
+            isbnMatch = false;
+            return isbnMatch;
         }
     }
 
