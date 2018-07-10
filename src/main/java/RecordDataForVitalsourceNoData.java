@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -14,10 +15,13 @@ public class RecordDataForVitalsourceNoData {
     private static java.sql.Statement stmt;
     private static ResultSet rs;
 
-    public static void getTestData() {
+    static ArrayList<String> myData = new ArrayList<>();
+    static ArrayList<String> myDataWithComma = new ArrayList<>();
+
+    public static void getTestData() throws IOException {
 
         String queryIsbnsNorAvailable = "SELECT distinct(ISBN13) FROM user_test.duty_vitalsource_data;";
-        ArrayList<String> myData = new ArrayList<>(); // list with the distinct of isbns from duty_vitalsource_data table
+         // list with the distinct of isbns from duty_vitalsource_data table
         try {
             con = DriverManager.getConnection(url, user, password);
             stmt = con.createStatement();
@@ -29,28 +33,28 @@ public class RecordDataForVitalsourceNoData {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
 
-        System.out.println("List with test data is created");
-
-
-            try {
-                stmt = con.createStatement();
-                for (int i=0; i<myData.size(); i++){
-                    stmt.executeUpdate("INSERT INTO user_test.cases (offer, url, rent_term) VALUES ("+ myData.get(i) +", null, null);"); // record isbns from the list to testcases table
-                }
-
-            } catch (SQLException sqlEx) {
-                sqlEx.printStackTrace();
+    public static void myDataWithComma(ArrayList<String> arr) {
+        for (int i = 0; i < arr.size(); i++) {
+            if (i < arr.size()-1){
+            StringBuffer sb = new StringBuffer(arr.get(i));
+            myDataWithComma.add(sb.insert(13, ",").toString());
+            }else if (i == arr.size()-1){
+                myDataWithComma.add(arr.get(arr.size()-1));
             }
+        }
+    }
 
-        try {
-            stmt.executeBatch();
-        } catch (SQLException e){
-            e.printStackTrace();
+    public static void main(String[] args)throws IOException, ClassNotFoundException {
+
+            getTestData();
+            myDataWithComma(myData);
+        for (String el:myDataWithComma
+             ) {
+            System.out.println(el);
+        }
         }
 
-        System.out.println("Test data are recorded to cengage.cases");
-
-    }
 
 }

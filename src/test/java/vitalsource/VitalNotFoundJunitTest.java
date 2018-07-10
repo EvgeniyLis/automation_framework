@@ -88,7 +88,6 @@ public class VitalNotFoundJunitTest {
                 driver.get(searchResults[i]);
                 info = driver.findElement(By.className("product-overview__title-block")).getText();
                 bookInfo.add(info);
-                takeScreenShot();
                 driver.navigate().back();
             }
 

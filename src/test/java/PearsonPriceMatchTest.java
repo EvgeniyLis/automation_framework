@@ -1,3 +1,4 @@
+import org.junit.AfterClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,11 +42,11 @@ public class PearsonPriceMatchTest extends BaseVitalSourseTest {
         return data;
     }
 
-    /*@AfterClass
+    @AfterClass
     public void taerDown(){
         if (driver!=null){
             driver.quit();
         }
-    }*/
+    }
 
 }

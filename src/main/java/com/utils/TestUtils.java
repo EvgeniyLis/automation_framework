@@ -3,6 +3,7 @@ package com.utils;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -16,15 +17,28 @@ public class TestUtils {
     public static WebDriver initchromeDriverWithProxy(){
         System.setProperty("webdriver.chrome.driver", ConfigProperties.getTestProperty("chromedriver"));
         Proxy proxy = new Proxy();
-        proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy1"));
-        proxy.setFtpProxy(ConfigProperties.getTestProperty("proxy1"));
-        proxy.setSslProxy(ConfigProperties.getTestProperty("proxy1"));
+        proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy"));
+        proxy.setFtpProxy(ConfigProperties.getTestProperty("proxy"));
+        proxy.setSslProxy(ConfigProperties.getTestProperty("proxy"));
         DesiredCapabilities cp = new DesiredCapabilities();
         cp.setCapability(CapabilityType.PROXY, proxy);
         WebDriver webDriver = new ChromeDriver(cp);
         webDriver.manage().window().maximize();
         return webDriver;
     }
+    //------------
+
+    public static WebDriver initGeckoDriverWithProxy() {
+        Proxy proxy = new Proxy();
+        proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy"))
+                .setFtpProxy(ConfigProperties.getTestProperty("proxy"))
+                .setSslProxy(ConfigProperties.getTestProperty("proxy"));
+        DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability(CapabilityType.PROXY, proxy);
+        WebDriver driver = new FirefoxDriver(cap);
+        return driver;
+    }
+
     //--------------------------------------------------------------------------------------------------------------
 
     // метод забора тестовых данных (в данном случае исбнов) из базы данных MySQL и дальнейшее их использование в тесте в аннотации DataProvider

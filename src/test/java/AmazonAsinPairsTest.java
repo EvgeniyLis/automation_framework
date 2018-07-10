@@ -1,22 +1,17 @@
 
-import vitalsource.BaseVitalSourseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.List;
+import vitalsource.BaseVitalSourseTest;
 
 import static com.utils.TestUtils.initchromeDriverWithProxy;
 
 public class AmazonAsinPairsTest extends BaseVitalSourseTest {
 
     WebDriver driver;
-    int response200 = 0;
-    int response400 = 0;
 
     @BeforeClass
     public void setUp(){
@@ -26,23 +21,9 @@ public class AmazonAsinPairsTest extends BaseVitalSourseTest {
     }
 
     @Test(dataProvider = "get_Asin_For_Asin_Isbn_Pair_Test")
-    public void noDataTestVitalSourse(String asin){
-        driver.get("https://www.amazon.com/dp/"+asin);
-
-        List<WebElement> content = driver.findElements(By.id("dp"));
-        List<WebElement> dog = driver.findElements(By.id("g"));
-
-        Assert.assertTrue(driver.findElement(By.id("detail-bullets")).getText().contains(asin));
-
-        if (content.size() > 0){
-            response200++;
-        }
-        else if (dog.size() > 0) {
-            response400++;
-        }
-
-        System.out.println("200 : "+response200);
-        System.out.println("400 : "+response400);
+    public void noDataTestVitalSourse(String url){
+        driver.get(url);
+        Assert.assertFalse(driver.findElement(By.xpath("//*[@id='mediaTab_content_landing']/div")).getText().contains("Buy new"));
     }
 
     @DataProvider
