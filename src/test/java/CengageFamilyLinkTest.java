@@ -1,8 +1,8 @@
 import com.utils.ExcelToDataProvider;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -14,20 +14,17 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.utils.TestUtils.initchromeDriverWithProxy;
-
-
-
-public class MhEducationNotFoundTest {
+public class CengageFamilyLinkTest {
 
     static WebDriver driver;
-    String isbnToList;
     ExcelToDataProvider excelToDataProvider = new ExcelToDataProvider();
-    ArrayList<String> failedIsbn = new ArrayList<>();
+    ArrayList<String> failedLinks = new ArrayList<>();
+    String failedFamilyLink;
+
 
     @BeforeClass
     public void setUp(){
-        driver = initchromeDriverWithProxy();
+        driver = new ChromeDriver() /*initchromeDriverWithProxy()*/;
         driver.manage().window().maximize();
     }
 
@@ -38,38 +35,34 @@ public class MhEducationNotFoundTest {
     }
 
     @Test(dataProvider = "getTestDataforNotFound")
-    public void notFoundTestMacmillan(String isbn){
-        isbnToList = isbn;
-        driver.get("https://www.mheducation.com/");
-        driver.findElement(By.id("higherEdQuery")).sendKeys(isbn, Keys.ENTER);
-        List<WebElement> noMessage = driver.findElements(By.className("none-msg"));
-        List<WebElement> blockWithIsbn = driver.findElements(By.className("bottom-button"));
-
-        if (blockWithIsbn.size() > 0){
-            Assert.assertFalse(driver.findElement(By.className("bottom-button")).getText().contains(isbn));
-        }
-        else if (noMessage.size()>0){
-            Assert.assertTrue(driver.findElement(By.className("none-msg")).getText().contains("0 Results"));
+    public void cengageFamilyLinkCheckTest(String url){
+        driver.get(url);
+        failedFamilyLink = url;
+        List<WebElement> noResult = driver.findElements(By.className("ceng-banner_inner"));
+        List<WebElement> yesResult = driver.findElements(By.cssSelector("div[class*='ceng-studentProduct_section']"));
+        if (noResult.size() > 0){
+            Assert.assertTrue(true);
+        }else if (yesResult.size() > 0){
+            Assert.assertTrue(false);
         }
     }
 
     @AfterMethod
     public void getResult(ITestResult result){
         if (result.getStatus() == ITestResult.FAILURE){
-            failedIsbn.add(isbnToList);
+            failedLinks.add(failedFamilyLink);
         }
     }
 
     @AfterClass
     public void taerDown(){
-        if (driver!=null){
+        /*if (driver!=null){
             driver.quit();
-        }
+        }*/
         try {
-            Files.write(Paths.get("src/testdata/isbn.txt"), failedIsbn, StandardOpenOption.CREATE);
+            Files.write(Paths.get("src/testdata/isbn.txt"), failedLinks, StandardOpenOption.CREATE);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 }

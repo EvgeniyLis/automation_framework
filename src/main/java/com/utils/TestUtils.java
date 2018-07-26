@@ -26,8 +26,7 @@ public class TestUtils {
         webDriver.manage().window().maximize();
         return webDriver;
     }
-    //------------
-
+    //---
     public static WebDriver initGeckoDriverWithProxy() {
         Proxy proxy = new Proxy();
         proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy"))
