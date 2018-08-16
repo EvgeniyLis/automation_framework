@@ -2,7 +2,6 @@ import com.utils.ExcelToDataProvider;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
@@ -13,8 +12,11 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class CengageFamilyLinkTest {
+import static com.utils.TestUtils.initchromeDriverWithProxy;
+
+public class CengageUnlimitedTest {
 
     static WebDriver driver;
     ExcelToDataProvider excelToDataProvider = new ExcelToDataProvider();
@@ -24,7 +26,7 @@ public class CengageFamilyLinkTest {
 
     @BeforeClass
     public void setUp(){
-        driver = new ChromeDriver() /*initchromeDriverWithProxy()*/;
+        driver = initchromeDriverWithProxy();
         driver.manage().window().maximize();
     }
 
@@ -35,15 +37,19 @@ public class CengageFamilyLinkTest {
     }
 
     @Test(dataProvider = "getTestDataforNotFound")
-    public void cengageFamilyLinkCheckTest(String url){
+    public void cengageFamilyLinkCheckTest(String url) {
         driver.get(url);
+        driver.manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
         failedFamilyLink = url;
-        List<WebElement> noResult = driver.findElements(By.className("ceng-banner_inner"));
-        List<WebElement> yesResult = driver.findElements(By.cssSelector("div[class*='ceng-studentProduct_section']"));
-        if (noResult.size() > 0){
+
+        List<WebElement> unlimitedTitle = driver.findElements(By.cssSelector("div[class*='ceng-studentProductPricing_description']"));
+        List<WebElement> noContent = driver.findElements(By.xpath("/html/body/main/div/div[1]/student-product-pricing/div/div/div[2]/div/p")); // /html/body/main/div/div[1]/student-product-pricing/div/div/div[2]/div/p
+        if (noContent.size() > 0) {
             Assert.assertTrue(true);
-        }else if (yesResult.size() > 0){
-            Assert.assertTrue(false);
+        } else if (unlimitedTitle.size()>0) {
+            Assert.assertFalse(driver.findElement(By.cssSelector("div[class*='ceng-studentProductPricing_description']")).getText().contains("Subscribe and Save with Cengage Unlimited"));
+        } else if (noContent.size() == 0 & unlimitedTitle.size() ==0){
+            Assert.assertTrue(true);
         }
     }
 
@@ -51,6 +57,9 @@ public class CengageFamilyLinkTest {
     public void getResult(ITestResult result){
         if (result.getStatus() == ITestResult.FAILURE){
             failedLinks.add(failedFamilyLink);
+            for (String el:failedLinks) {
+                System.out.println(el);
+            }
         }
     }
 

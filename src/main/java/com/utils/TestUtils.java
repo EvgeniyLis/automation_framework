@@ -17,9 +17,9 @@ public class TestUtils {
     public static WebDriver initchromeDriverWithProxy(){
         System.setProperty("webdriver.chrome.driver", ConfigProperties.getTestProperty("chromedriver"));
         Proxy proxy = new Proxy();
-        proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy"));
-        proxy.setFtpProxy(ConfigProperties.getTestProperty("proxy"));
-        proxy.setSslProxy(ConfigProperties.getTestProperty("proxy"));
+        proxy.setHttpProxy(ConfigProperties.getTestProperty("proxy1"));
+        proxy.setFtpProxy(ConfigProperties.getTestProperty("proxy1"));
+        proxy.setSslProxy(ConfigProperties.getTestProperty("proxy1"));
         DesiredCapabilities cp = new DesiredCapabilities();
         cp.setCapability(CapabilityType.PROXY, proxy);
         WebDriver webDriver = new ChromeDriver(cp);

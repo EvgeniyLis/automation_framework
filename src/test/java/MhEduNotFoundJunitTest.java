@@ -47,13 +47,16 @@ public class MhEduNotFoundJunitTest {
         @Override
         protected void failed(Throwable e, Description description) {
           failedIsbn.add(isbn);
+            for (String el:failedIsbn) {
+                System.out.println(el);
+            }
         }
     };
 
     @BeforeClass
     public static void setUp(){
         driver = initchromeDriverWithProxy();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
     }
 
